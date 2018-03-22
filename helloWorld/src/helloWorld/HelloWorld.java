@@ -11,13 +11,18 @@ import javafx.stage.Stage;
 
 public class HelloWorld extends Application
 {
+	private static int counter = 0;
+	
 	public static void main(String[] args)
 	{
-        launch(args);
+       
+		launch(args);
     }
 
 	public void start (Stage primaryStage)
 	{
+		
+		
 		primaryStage.setTitle("Does This Button Work?");
 		Button btn = new Button();
 		btn.setText("Does This Button Work?");
@@ -26,7 +31,8 @@ public class HelloWorld extends Application
 			public void handle (ActionEvent event)
 			{
 				System.out.println("No");
-				
+				counter++;
+				System.out.println(counter);
 			}
 		});
 	StackPane root = new StackPane();
